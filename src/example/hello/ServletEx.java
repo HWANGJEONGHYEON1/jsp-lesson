@@ -35,7 +35,7 @@ public class ServletEx extends HttpServlet {
         //write메소드 속에는 html문서를 작성한다.
         out.write("<html><body>");
         out.write("<h1>"+name+"님 이 집속하셨습니다.</h1>");
-        out.write("<a href='/ch1/test.jsp'>초기화면으로 이동</a>");
+        out.write("<a href='test.jsp'>초기화면으로 이동</a>");
         out.write("<h1>PATH : " + request.getContextPath() + "</ㅗ1>");
         out.write("</body></html>");
 
@@ -47,6 +47,7 @@ public class ServletEx extends HttpServlet {
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //POST방식 코드 작성
+        System.out.println("hello");
+        response.sendRedirect("/");
     }
 }
