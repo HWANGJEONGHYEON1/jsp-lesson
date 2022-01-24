@@ -12,5 +12,8 @@
   </head>
   <body>
   HelloWorld
+  <%
+    request.getContextPath();
+  %>
   </body>
 </html>
