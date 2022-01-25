@@ -6,7 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
+<%
+    request.setCharacterEncoding("UTF-8");
+    String name = request.getParameter("name");
+%>
 <html>
 <head>
     <title>Title</title>
@@ -17,8 +20,7 @@
 <!-- 전송 방식을 설정하지 않으면 기본 GET방식으로 작동한다. -->
 <form action="/request" method="post">
     <p>이름 입력 후 버튼을 눌러 서블릿 페이지로 이름 전송</p>
-    <input type="text" name="name">
-    <input type="submit" value="버튼">
+    <div> <%=name%></div>
 </form>
 </body>
 </html>

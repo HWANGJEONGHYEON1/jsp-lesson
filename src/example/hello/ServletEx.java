@@ -1,5 +1,6 @@
 package example.hello;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -47,7 +48,12 @@ public class ServletEx extends HttpServlet {
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("hello");
-        response.sendRedirect("/");
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        String name = request.getParameter("name");
+        request.setAttribute("name", name);
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("name.jsp");
+        dispatcher.forward(request, response);
     }
 }
