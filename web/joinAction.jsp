@@ -53,7 +53,7 @@
 				script.println("alert('이미 존재하는 아이디입니다.')");
 				script.println("history.back()"); //이전 페이지로 이동
 				script.println("</script>");
-			} else{ //정상적으로 회원가입 완료
+			} else { //정상적으로 회원가입 완료
 				session.setAttribute("userID", user.getUserID());
 				PrintWriter script = response.getWriter(); //자바스크립트 코드 사용
 				script.println("<script>");

@@ -9,6 +9,8 @@
       <root url="jar://$PROJECT_DIR$/lib/wsdl4j-1.5.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.8.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/axis.jar!/" />
+      <root url="jar://$USER_HOME$/IdeaProjects/apache-tomcat-9.0.40/lib/servlet-api.jar!/" />
+      <root url="jar://$USER_HOME$/IdeaProjects/apache-tomcat-9.0.40/lib/jsp-api.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
